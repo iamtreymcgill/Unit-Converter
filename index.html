@@ -1,6 +1,9 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="top-container">
@@ -9,17 +12,17 @@
             <button id="convert-btn">Convert</button>
         </div>
         <div id="bottom-container">
-            <div id="length-section">
+            <div id="length-section" class="section">
                 <h2 id="length-st">Length (Meter/Feet)</h2>
-                <p id="length"></p>
+                <p id="length" class="unit"></p>
             </div>
-            <div id="volume-section">
+            <div id="volume-section" class="section">
                 <h2 id="volume-st">Volume (Liters/Gallons)</h2>
-                <p id="volume"></p>
+                <p id="volume" class="unit"></p>
             </div>
-            <div id="mass-section">
+            <div id="mass-section" class="section">
                 <h2 id="mass-st">Mass (Kilograms/Pounds)</h2>
-                <p id="mass"></p>
+                <p id="mass" class="unit"></p>
             </div>
         </div>
          <script src="index.js"></script>
