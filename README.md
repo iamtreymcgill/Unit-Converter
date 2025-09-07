@@ -1,19 +1,41 @@
-# Getting Started
-Install the dependencies and run the project
-```
-npm install
-npm start
-```
+# 🌍 Unit Converter
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
+A simple **Metric ↔ Imperial Unit Converter** built as part of the [Scrimba Frontend Developer Path](https://scrimba.com/).  
+This project lets you quickly convert between **length, volume, and mass** using a single input.
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Fullstack Developer Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+---
 
-- [Our courses](https://scrimba.com/courses)
-- [The Frontend Career Path](https://scrimba.com/fullstack-path-c0fullstack)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+## ✨ Features
 
-Happy Coding!
+- Convert between:
+  - **Length**: meters ↔ feet
+  - **Volume**: liters ↔ gallons
+  - **Mass**: kilograms ↔ pounds
+- Clean, minimal UI
+- Built with **HTML**, **CSS**, and **JavaScript**
+- Instant conversion with one click
+
+---
+
+## 🚀 Demo
+
+![Unit Converter Screenshot](screenshot.png)  
+*(Add your own screenshot here!)*
+
+---
+
+## 🛠️ Technologies Used
+
+- **HTML5** for structure  
+- **CSS3** for styling  
+- **Vanilla JavaScript** for logic and DOM manipulation  
+
+---
+
+## 📖 How It Works
+
+1. Enter a number in the input field.  
+2. Click **Convert**.  
+3. See the results for all three categories (Length, Volume, Mass).  
+
+Example:  
