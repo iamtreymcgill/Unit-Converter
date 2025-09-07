@@ -1,36 +1,58 @@
 /*
-1 meter = 3.281 feet
-1 liter = 0.264 gallon
-1 kilogram = 2.204 pound
+1 meter = 3.28084 feet
+1 liter = 0.264172 gallon
+1 kilogram = 2.20462 pound
 */
+const FACTORS = {
+    length: 3.28084,
+    volume: 0.264172, 
+    mass: 2.20462
+}
+
 const convertBtn = document.getElementById("convert-btn")
 const input = document.getElementById("input")
-const length = document.getElementById("length")
-const volume = document.getElementById("volume")
-const mass = document.getElementById("mass")
+
+const lengthEl = document.getElementById("length")
+const volumeEl = document.getElementById("volume")
+const massEl = document.getElementById("mass")
 
 convertBtn.addEventListener("click", function(){
-        lengthConverter()
-        volumeConverter()
-        massConverter()
+       render()
 })
 
-function lengthConverter (){
-    let meter = Number(input.value) / 3.28084
-    let feet = Number(input.value) * 3.28084
-    length.textContent = `${input.value} meters = ${feet.toFixed(3)} feet | ${input.value} feet = ${meter.toFixed(3)} meters`
-    // console.log(`${feet.toFixed(3)} ft ${meter.toFixed(3)} m`)
-}
-function volumeConverter (){
-    let liter = Number(input.value) / 0.264172
-    let gallon = Number(input.value) * 0.264172
-    volume.textContent = `${input.value} liters = ${gallon.toFixed(3)} gallons | ${input.value} gallons = ${liter.toFixed(3)} liters`
-    // console.log(`${liter.toFixed(3)} liters ${gallon.toFixed(3)} gallons`)
-}
-function massConverter (){
-    let kg = Number(input.value) / 2.20462
-    let lb = Number(input.value) * 2.20462
-    mass.textContent = `${input.value} kilos = ${lb.toFixed(3)} pounds | ${input.value} pounds = ${kg.toFixed(3)} kilos`
-    // console.log(`${kg.toFixed(3)} kilos ${lb.toFixed(3)} pounds`)
+function convert(value, factor){
+    return {
+        aToB: value * factor, 
+        bToA: value / factor
+    }
 }
 
+function render(){
+    let str = input.value
+    let num = Number(str)
+    
+    let sections = [
+        {
+            el: lengthEl, 
+            factor: FACTORS.length,
+            units: ["meters","feet"]
+        },
+        {
+            el: volumeEl,
+            factor: FACTORS.volume, 
+            units: ["liters", "gallons"]
+        },
+        {
+            el: massEl,
+            factor: FACTORS.mass, 
+            units: ["kilos", "pounds"]
+        }
+    ]
+
+    for (let i = 0; i < sections.length; i++){
+        let section = sections[i]
+        let conversion = convert(num, section.factor)
+        //20 meters = 65.616 feet | 20 feet = 6.096 meters
+        section.el.innerHTML = `${num} ${section.units[0]} = ${conversion.aToB.toFixed(3)} ${section.units[1]} | ` + `${num} ${section.units[1]} = ${conversion.bToA.toFixed(3)} ${section.units[0]}`
+    }
+}
