@@ -19,8 +19,7 @@ This project lets you quickly convert between **length, volume, and mass** using
 
 ## 🚀 Demo
 
-![Unit Converter Screenshot](screenshot.png)  
-*(Add your own screenshot here!)*
+![Unit Converter Screenshot](./assets/images/Unit_Converter_Screenshot.png)  
 
 ---
 
@@ -39,3 +38,35 @@ This project lets you quickly convert between **length, volume, and mass** using
 3. See the results for all three categories (Length, Volume, Mass).  
 
 Example:  
+- 10 meters = 32.808 feet | 10 feet = 3.048 meters
+- 10 liters = 2.642 gallons | 10 gallons = 37.854 liters
+- 10 kilos = 22.046 pounds | 10 pounds = 4.536 kilos
+
+---
+
+## ⚡ Getting Started
+
+To run the project locally:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/iamtreymcgill/Unit-Converter.git
+
+## 📚 Lessons Learned
+- Practiced using objects to store conversion factors.
+- Learned to create reusable functions for conversions.
+- Improved understanding of event listeners and DOM manipulation.
+
+⸻
+
+## 🌱 Future Improvements
+- Add more unit categories (temperature, speed, etc.)
+- Allow users to choose conversion direction with dropdowns
+- Improve design with better styling and responsiveness
+
+⸻
+
+## 🙌 Acknowledgments
+
+This project was built as part of the Scrimba Frontend Developer Path.
+Big thanks to Scrimba for making coding fun and interactive!
